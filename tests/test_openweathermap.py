@@ -50,7 +50,7 @@ class Test_OpenWeatherMap(BaseClass):
 
         else:
             # If the test is successful, log a success message and the result of the test
-            self.logger.info(f"Title is matched {dropdown_value}.")
+            self.logger.info(f"Same City is displayed {dropdown_value}.")
 
     def test_verify_that_if_user_enter_partial_text_of_a_city_it_should_show_a_alert(self, get_data):
 
@@ -125,7 +125,7 @@ class Test_OpenWeatherMap(BaseClass):
 
         else:
             # If the test is successful, log a success message and the result of the test
-            self.logger.info(f"Title is matched {glo.searched_city_data}.")
+            self.logger.info(f"Same City data is displayed {glo.searched_city_data}.")
 
     def test_verify_that_when_user_select_celsius_format_then_data_should_be_displayed_in_celsius_format_or_not(self):
 
@@ -148,7 +148,7 @@ class Test_OpenWeatherMap(BaseClass):
 
         else:
             # If the test is successful, log a success message and the result of the test
-            self.logger.info(f"Title is matched {format}.")
+            self.logger.info(f"Format is in celsius {format}.")
 
     def test_verify_that_when_user_select_fahrenheit_format_then_data_should_be_displayed_in_fahrenheit_format_or_not(self):
 
@@ -173,7 +173,7 @@ class Test_OpenWeatherMap(BaseClass):
 
         else:
             # If the test is successful, log a success message and the result of the test
-            self.logger.info(f"Title is matched {format}.")
+            self.logger.info(f"Format is in Fahrenheit {format}.")
 
     def test_verify_that_8_days_forcast_should_be_displayed_in_the_8_days_forcast_section(self):
 
