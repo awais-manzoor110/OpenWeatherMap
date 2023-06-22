@@ -1,0 +1,1 @@
+[32mINFO    [0m setup_method:test_openweathermap.py:33 Title is matched Сurrent weather and forecast - OpenWeatherMap.

@@ -1,0 +1,12 @@
+[32mINFO    [0m setup_method:test_openweathermap.py:128 Title is matched Jun 23, 03:09am
+Lahore, PK
+34°C
+Feels like 40°C. Smoke. Light breeze
+3.1m/s WSW
+998hPa
+Humidity:
+55%
+Dew point:
+24°C
+Visibility:
+5.0km.

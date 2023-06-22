@@ -1,0 +1,1 @@
+[32mINFO    [0m setup_method:test_openweathermap.py:108 Same city name is in the field Lahore.

@@ -1,0 +1,1 @@
+[32mINFO    [0m setup_method:test_openweathermap.py:72 Alert is shownNot found.

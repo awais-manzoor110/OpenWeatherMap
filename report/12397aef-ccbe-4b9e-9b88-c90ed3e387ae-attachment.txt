@@ -1,0 +1,1 @@
+[32mINFO    [0m setup_method:test_openweathermap.py:91 Same Search Result is displayed.
