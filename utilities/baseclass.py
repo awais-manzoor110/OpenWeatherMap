@@ -22,7 +22,7 @@ class BaseClass:
     def get_logger(self):
         loggername = inspect.stack()[1][3]
         logger = logging.getLogger(loggername)
-        filehandler = logging.FileHandler("C:/Myfiles/manafah_financing_v2/manafa_scripts/reports/logFile.log", encoding='utf-8')
+        filehandler = logging.FileHandler("logFile.log", encoding='utf-8')
         formatter = logging.Formatter("%(asctime)s :%(levelname)s :%(name)s :%(message)s ")
         filehandler.setFormatter(formatter)
         logger.addHandler(filehandler)
