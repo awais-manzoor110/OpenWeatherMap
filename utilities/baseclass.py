@@ -19,6 +19,23 @@ class BaseClass:
         target_element = self.driver.find_element(By.XPATH, text)
         self.driver.execute_script("arguments[0].click();", target_element)
 
+        def allure_report(self, test_name):
+        if not os.path.exists("./report"):
+            os.makedirs("./report")
+        screenshot_path = f"./report/error.png"
+        self.driver.save_screenshot(screenshot_path)
+        with open(screenshot_path, "rb") as file:
+            allure.attach(file.read(), name=f"{test_name}", attachment_type=allure.attachment_type.PNG)
+
+    def screenshot(self, test_name):
+        parent_directory = os.path.abspath(os.path.join(os.getcwd(), ".."))
+        report_directory = os.path.join(parent_directory, "report")
+        if not os.path.exists(report_directory):
+            os.makedirs(report_directory)
+
+        screenshot_path = os.path.join(report_directory, f"{test_name}.png")
+        self.driver.save_screenshot(screenshot_path)
+
     def get_logger(self):
         loggername = inspect.stack()[1][3]
         logger = logging.getLogger(loggername)
