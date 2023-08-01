@@ -15,7 +15,7 @@ class Test_OpenWeatherMap(BaseClass):
         # Create logger object for logging test results
         self.logger = self.get_logger()
 
-    def test_verify_that_title_of_the_website_should_be_current_weather_and_forcast(self):
+    def test_verify_that_title_of_the_website_should_be_current_weather_and_forcast(self, request):
 
         try:
 
@@ -26,7 +26,9 @@ class Test_OpenWeatherMap(BaseClass):
 
             # If an exception occurs during the test, log the exception and skip the test
             self.logger.error(f"An exception occurred: {e}")
-            self.driver.save_screenshot("report/test_case_error.png")
+            test_case_name = request.node.originalname
+            self.screenshot(test_case_name)
+            self.allure_report(test_case_name)
 
         else:
             # If the test is successful, log a success message and the result of the test
